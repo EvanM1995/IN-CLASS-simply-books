@@ -8,6 +8,7 @@ export default function ViewAuthor() {
   const router = useRouter();
   const { firebaseKey } = router.query;
 
+  console.warn(authorBooks);
   useEffect(() => {
     viewAuthorDetails(firebaseKey).then(setAuthorBooks);
   }, [firebaseKey]);
@@ -29,4 +30,3 @@ export default function ViewAuthor() {
     </div>
   );
 }
-
