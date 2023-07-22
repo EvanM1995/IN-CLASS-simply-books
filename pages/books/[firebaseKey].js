@@ -28,11 +28,7 @@ export default function ViewBook() {
         Author Email: <a href={`mailto:${bookDetails.authorObject?.email}`}>{bookDetails.authorObject?.email}</a>
         <p>{bookDetails.description || ''}</p>
         <hr />
-        <p>
-          {bookDetails.sale
-            ? `🏷️ Sale $${bookDetails.price}`
-            : `$${bookDetails.price}`}
-        </p>
+        <p>{bookDetails.sale ? `🏷️ Sale $${bookDetails.price}` : `$${bookDetails.price}`}</p>
       </div>
     </div>
   );
